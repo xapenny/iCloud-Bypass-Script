@@ -2,8 +2,8 @@
 echo "> 正在安装依赖..."
 brew install libusbmuxd https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
 echo
-echo "> 正在删除SSH信任列表..."
-rm -rf ~/.ssh/known_hosts
+echo "> 正在备份SSH信任列表到~/.ssh/known_hosts.bak..."
+mv ~/.ssh/known_hosts ~/.ssh/known_hosts.bak
 clear
 echo "==================== 激活锁绕过脚本 ==================="
 echo
